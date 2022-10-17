@@ -1,12 +1,13 @@
 <template>
-	<h1>
-		Sign up
-	</h1>
+	<h1>Sign up</h1>
 	<div class="register">
 		<input type="text" v-model="name" placeholder="enter name">
 		<input type="email" v-model="email" placeholder="enter email">
 		<input type="password" v-model="password" placeholder="enter password">
 		<button @click="signUp">Sign up</button>
+		<p>
+			<router-link to="/login">already have an account?</router-link>
+		</p>
 	</div>
 </template>
 
@@ -37,32 +38,12 @@
 					this.$router.push({name: 'Home'})
 				}
 			}
+		},
+		mounted() {
+			let user = localStorage.getItem('user-info')
+			if (user) {
+				this.$router.push({name: 'Home'})
+			}
 		}
 	}
 </script>
-
-<style>
-	.logo {
-		width: 100px;
-	}
-
-	.register input {
-		width: 300px;
-		height: 40px;
-		padding-left: 20px;
-		display: block;
-		margin-bottom: 30px;
-		margin-right: auto;
-		margin-left: auto;
-		border: 1px solid skyblue;
-	}
-
-	.register button {
-		width: 320px;
-		height: 40px;
-		border: 1px solid skyblue;
-		background: skyblue;
-		color: #fff;
-		cursor: pointer;
-	}
-</style>

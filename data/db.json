@@ -23,6 +23,12 @@
       "email": "thegenzo@gmail.com",
       "password": "thegenzo123",
       "id": 4
+    },
+    {
+      "name": "amanda",
+      "email": "amanda@gmail.com",
+      "password": "amanda123",
+      "id": 5
     }
   ]
 }

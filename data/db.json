@@ -1,0 +1,28 @@
+{
+  "user": [
+    {
+      "name": "dicky agusputra",
+      "email": "dicky@email.com",
+      "password": "dicky123",
+      "id": 1
+    },
+    {
+      "name": "mush",
+      "email": "mush@gmail.com",
+      "password": "mush12345",
+      "id": 2
+    },
+    {
+      "name": "jeklin",
+      "email": "jeklin@gmail.com",
+      "password": "jeklin123",
+      "id": 3
+    },
+    {
+      "name": "thegenzo",
+      "email": "thegenzo@gmail.com",
+      "password": "thegenzo123",
+      "id": 4
+    }
+  ]
+}

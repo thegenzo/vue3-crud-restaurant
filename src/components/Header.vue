@@ -16,7 +16,7 @@ export default {
 			console.log(result)
 
 			if (result) {
-				localStorage.removeItem('user-info')
+				localStorage.clear()
 				this.$router.push('/login')
 			}
 		}

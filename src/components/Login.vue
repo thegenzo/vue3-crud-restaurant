@@ -1,4 +1,5 @@
 <template>
+	<img alt="Vue logo" class="logo" src="../assets/logo.png">
 	<h1>Login page</h1>
 	<div class="login">
 		<input type="email" v-model="email" placeholder="enter email">

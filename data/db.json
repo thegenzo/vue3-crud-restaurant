@@ -30,5 +30,19 @@
       "password": "amanda123",
       "id": 5
     }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "Chicken Burger",
+      "contact": "12345",
+      "address": "Batulo"
+    },
+    {
+      "id": 2,
+      "name": "Fried Rice",
+      "contact": "12345",
+      "address": "Palatiga"
+    }
   ]
 }

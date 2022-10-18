@@ -1,9 +1,11 @@
 <template lang="">
 	<div class="nav">
-		<a href="#">Home</a>
-		<a href="#">Add Restaraunt</a>
-		<a href="#">Update Restaurant</a>
-		<a href="#" @click="logout" onclick="return confirm('are you sure to logout?')">Logout</a>
+		<router-link to="/">Home</router-link>
+		<router-link to="/add">Add Restaraunt</router-link>
+		<router-link to="/update">Update Restaurant</router-link>
+		<form action="#" @click="logout" onclick="return confirm('are you sure to logout?')">
+			<button type="submit">Logout</button>
+		</form>
 	</div>
 	<h1>Header</h1>
 </template>
@@ -39,7 +41,21 @@ export default {
 		margin-right: 5px;
 	}
 
-	.nav a:hover {
+	.nav button {
+		float: left;
+		background-color: #333;
+		color: #f2f2f2f2;
+		padding: 14px 16px;
+		text-align: center;
+		font-size: 17px;
+		text-decoration: none;
+		margin-right: 5px;
+		border: none;
+		cursor: pointer;
+	}
+
+
+	.nav a:hover, .nav button:hover {
 		background: #ddd;
 		color: #333; 
 	}

@@ -1,8 +1,13 @@
-# vue-resto-project
+# Vue JS 3 CRUD Restaurant with json-server
 
 ## Project setup
 ```
 npm install
+```
+
+### Run json-server
+```
+json-server --watch data/db.json
 ```
 
 ### Compiles and hot-reloads for development

@@ -5,7 +5,7 @@
 		<input type="text" name="name" id="name" placeholder="enter name" v-model="restaurant.name">
 		<input type="text" name="address" id="address" placeholder="enter address" v-model="restaurant.address">
 		<input type="text" name="contact" id="contact" placeholder="enter contact" v-model="restaurant.contact">
-		<button type="button" @click="addRestaurant">update restaurant</button>
+		<button type="button" @click="updateRestaurant()">update restaurant</button>
 	</form>
 </template>
 
@@ -38,5 +38,18 @@ export default {
 		this.restaurant.address = result.data.address
 		this.restaurant.contact = result.data.contact
 	},
+	methods: {
+		async updateRestaurant() {
+			let result = await axios.put('http://localhost:3000/restaurants/' + this.$route.params.id, {
+				name: this.restaurant.name,
+				address: this.restaurant.address,
+				contact: this.restaurant.contact
+			})
+
+			if (result.status == 200) {
+				this.$router.push({name: 'Home'})
+			}
+		}
+	}
 }
 </script>

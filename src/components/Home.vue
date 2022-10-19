@@ -16,6 +16,7 @@
 			<td>{{ item.address }}</td>
 			<td>
 				<router-link :to="'/update/' + item.id" >Update</router-link>
+				<button @click="deleteRestaurant(item.id)">delete</button>
 			</td>
 		</tr>
 	</table>
@@ -36,16 +37,26 @@ export default {
 			restaurant: []
 		}
 	},
-	async mounted() {
-		let user =  localStorage.getItem('user-info')
-		this.name = await JSON.parse(user).name
-		if (!user) {
-			this.$router.push({name: 'SignUp'})
+	methods: {
+		async deleteRestaurant(id) {
+			let result = await axios.delete('http://localhost:3000/restaurants/'+ id)
+			if (result.status == 200) {
+				this.loadData()
+			}
+		},
+		async loadData() {
+			let user =  localStorage.getItem('user-info')
+			this.name = await JSON.parse(user).name
+			if (!user) {
+				this.$router.push({name: 'SignUp'})
+			}
+
+			let result = await axios.get('http://localhost:3000/restaurants')
+			this.restaurant = result.data
 		}
-
-		let result = await axios.get('http://localhost:3000/restaurants')
-		this.restaurant = result.data
-
+	},
+	async mounted() {
+		this.loadData()
 	},
 }
 </script> 

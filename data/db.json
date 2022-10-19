@@ -43,6 +43,18 @@
       "name": "Fried Rice",
       "contact": "12345",
       "address": "Palatiga"
+    },
+    {
+      "name": "KFC fried chicken",
+      "address": "Batulo",
+      "contact": "14065",
+      "id": 3
+    },
+    {
+      "name": "silvana",
+      "address": "betoambari",
+      "contact": "1234567",
+      "id": 4
     }
   ]
 }

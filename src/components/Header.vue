@@ -2,7 +2,6 @@
 	<div class="nav">
 		<router-link to="/">Home</router-link>
 		<router-link to="/add">Add Restaraunt</router-link>
-		<router-link to="/update">Update Restaurant</router-link>
 		<form action="#" @click="logout" onclick="return confirm('are you sure to logout?')">
 			<button type="submit">Logout</button>
 		</form>
